@@ -22,6 +22,7 @@
     <ProjectGuid>{DFA0BA98-D0BA-4176-9A34-B5BA6355B1DE}</ProjectGuid>
     <RootNamespace>uefi-simple</RootNamespace>
     <ProjectName>UEFICarp</ProjectName>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
@@ -50,6 +51,7 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -205,12 +207,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\main.c" />
+    <None Include="debug.vbs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="debug.vbs" />
+    <ClInclude Include="..\source\loader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\source\main.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="intrin.asm" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
   </ImportGroup>
 </Project>

@@ -7,7 +7,7 @@
 ' Note: You may get a prompt from the firewall when trying to download the BIOS file
 
 ' Modify these variables as needed
-QEMU_PATH  = "C:\Program Files\qemu\"
+QEMU_PATH  = "E:\Program Files\qemu\"
 QEMU_EXE   = "qemu-system-x86_64w.exe"
 FTP_SERVER = "ftp.heanet.ie"
 FTP_DIR    = "pub/download.sourceforge.net/pub/sourceforge/e/ed/edk2/OVMF/"

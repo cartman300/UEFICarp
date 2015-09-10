@@ -19,8 +19,18 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\main.c">
+    <ClInclude Include="..\source\loader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\source\main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="intrin.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
   </ItemGroup>
 </Project>
