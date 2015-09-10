@@ -21,6 +21,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{DFA0BA98-D0BA-4176-9A34-B5BA6355B1DE}</ProjectGuid>
     <RootNamespace>uefi-simple</RootNamespace>
+    <ProjectName>UEFICarp</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
